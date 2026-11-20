@@ -1,0 +1,13 @@
+[server]
+# Serve files in ./static at /app/static (used for the custom font)
+enableStaticServing = true
+
+[theme]
+base = "dark"
+headingFont = "Helvetica Neue Bold Italic, Helvetica Neue, Arial, sans-serif"
+
+[[theme.fontFaces]]
+family = "Helvetica Neue Bold Italic"
+url = "app/static/HelveticaNeueBoldItalic.otf"
+weight = 700
+style = "italic"

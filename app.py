@@ -286,10 +286,10 @@ with tab_insights:
         st.altair_chart(
             alt.Chart(city_aqi).mark_bar().encode(
                 x=alt.X("AQI:Q", title="Median AQI"),
-                y=alt.Y("City:N", sort="-x", title=None),
+                y=alt.Y("City:N", sort="-x", title=None, axis=alt.Axis(labelOverlap=False, labelLimit=220)),
                 color=alt.Color("AQI:Q", scale=alt.Scale(scheme="orangered"), legend=None),
                 tooltip=["City", alt.Tooltip("AQI:Q", format=".0f")],
-            ).properties(height=520),
+            ).properties(height=26 * 24),
             width="stretch",
         )
         st.caption("Northern cities on the Indo-Gangetic plain (Delhi, Patna, Gurugram, Lucknow) are the most "
