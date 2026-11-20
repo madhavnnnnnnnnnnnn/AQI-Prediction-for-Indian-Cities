@@ -1,0 +1,231 @@
+{
+  "best_model": "Gradient Boosting (tuned)",
+  "best_params": {
+    "Decision Tree (tuned)": {
+      "max_depth": 6,
+      "min_samples_leaf": 30
+    },
+    "Random Forest (tuned)": {
+      "n_estimators": 200,
+      "min_samples_leaf": 10,
+      "max_features": 0.8,
+      "max_depth": 8
+    },
+    "Gradient Boosting (tuned)": {
+      "subsample": 0.85,
+      "n_estimators": 400,
+      "min_samples_leaf": 20,
+      "max_depth": 3,
+      "learning_rate": 0.03
+    }
+  },
+  "train_period": [
+    "2015-01-01",
+    "2018-12-31"
+  ],
+  "test_period": [
+    "2019-01-01",
+    "2020-06-30"
+  ],
+  "n_train": 12575,
+  "n_test": 11027,
+  "cv_results": [
+    {
+      "Model": "Gradient Boosting (tuned)",
+      "CV MAE": 28.69,
+      "CV MAE std": 5.05,
+      "CV RMSE": 41.923,
+      "CV R2": 0.825
+    },
+    {
+      "Model": "Random Forest (tuned)",
+      "CV MAE": 28.763,
+      "CV MAE std": 6.034,
+      "CV RMSE": 41.66,
+      "CV R2": 0.828
+    },
+    {
+      "Model": "Gradient Boosting",
+      "CV MAE": 29.369,
+      "CV MAE std": 5.591,
+      "CV RMSE": 43.021,
+      "CV R2": 0.817
+    },
+    {
+      "Model": "Random Forest",
+      "CV MAE": 29.733,
+      "CV MAE std": 6.052,
+      "CV RMSE": 42.816,
+      "CV R2": 0.816
+    },
+    {
+      "Model": "Decision Tree (tuned)",
+      "CV MAE": 31.473,
+      "CV MAE std": 4.899,
+      "CV RMSE": 45.252,
+      "CV R2": 0.794
+    },
+    {
+      "Model": "Decision Tree",
+      "CV MAE": 33.23,
+      "CV MAE std": 6.061,
+      "CV RMSE": 49.682,
+      "CV R2": 0.754
+    },
+    {
+      "Model": "Linear Regression",
+      "CV MAE": 38.96,
+      "CV MAE std": 7.694,
+      "CV RMSE": 51.494,
+      "CV R2": 0.74
+    },
+    {
+      "Model": "Baseline (mean)",
+      "CV MAE": 95.909,
+      "CV MAE std": 6.857,
+      "CV RMSE": 111.253,
+      "CV R2": -0.273
+    }
+  ],
+  "test_results": [
+    {
+      "Model": "Gradient Boosting (tuned)",
+      "MAE": 19.083,
+      "RMSE": 28.431,
+      "R2": 0.88
+    },
+    {
+      "Model": "Random Forest (tuned)",
+      "MAE": 19.185,
+      "RMSE": 28.588,
+      "R2": 0.879
+    },
+    {
+      "Model": "Gradient Boosting",
+      "MAE": 19.277,
+      "RMSE": 28.705,
+      "R2": 0.878
+    },
+    {
+      "Model": "Random Forest",
+      "MAE": 19.476,
+      "RMSE": 29.132,
+      "R2": 0.874
+    },
+    {
+      "Model": "Decision Tree",
+      "MAE": 21.164,
+      "RMSE": 31.525,
+      "R2": 0.853
+    },
+    {
+      "Model": "Decision Tree (tuned)",
+      "MAE": 21.71,
+      "RMSE": 31.567,
+      "R2": 0.852
+    },
+    {
+      "Model": "Linear Regression",
+      "MAE": 26.186,
+      "RMSE": 35.011,
+      "R2": 0.818
+    },
+    {
+      "Model": "Baseline (mean)",
+      "MAE": 82.165,
+      "RMSE": 93.705,
+      "R2": -0.301
+    }
+  ],
+  "baseline_test_mae": 82.165,
+  "permutation_importance": {
+    "PM2.5": 32.039,
+    "PM10": 14.986,
+    "CO": 2.98,
+    "O3": 1.327,
+    "SO2": 0.115,
+    "NH3": 0.103,
+    "NO2": 0.1,
+    "season_monsoon": 0.046,
+    "season_post_monsoon": 0.015,
+    "month": 0.012,
+    "day_of_week": 0.009,
+    "season_winter": 0.005,
+    "season_summer": 0.0
+  },
+  "error_by_city": {
+    "Aizawl": 32.0,
+    "Ahmedabad": 28.8,
+    "Guwahati": 27.9,
+    "Gurugram": 27.0,
+    "Delhi": 26.6,
+    "Patna": 26.0,
+    "Lucknow": 25.7,
+    "Jorapokhar": 23.8,
+    "Talcher": 23.1,
+    "Brajrajnagar": 21.9,
+    "Amritsar": 20.6,
+    "Kochi": 20.2,
+    "Chennai": 20.0,
+    "Kolkata": 18.8,
+    "Bhopal": 17.5,
+    "Amaravati": 16.6,
+    "Visakhapatnam": 16.5,
+    "Jaipur": 16.0,
+    "Chandigarh": 15.4,
+    "Shillong": 13.8,
+    "Ernakulam": 13.6,
+    "Mumbai": 12.6,
+    "Coimbatore": 10.9,
+    "Hyderabad": 10.3,
+    "Thiruvananthapuram": 10.0,
+    "Bengaluru": 9.4
+  },
+  "error_by_season": {
+    "winter": 23.0,
+    "post_monsoon": 20.0,
+    "summer": 18.4,
+    "monsoon": 15.5
+  },
+  "error_by_category": {
+    "Good": {
+      "days": 941,
+      "MAE": 19.3,
+      "bias": 19.3
+    },
+    "Satisfactory": {
+      "days": 4526,
+      "MAE": 11.6,
+      "bias": 5.6
+    },
+    "Moderate": {
+      "days": 3920,
+      "MAE": 22.0,
+      "bias": 1.2
+    },
+    "Poor": {
+      "days": 978,
+      "MAE": 33.3,
+      "bias": -7.4
+    },
+    "Very Poor": {
+      "days": 537,
+      "MAE": 27.5,
+      "bias": -12.9
+    },
+    "Severe": {
+      "days": 125,
+      "MAE": 52.2,
+      "bias": -37.4
+    }
+  },
+  "interval_80": 28.0,
+  "interval_80_by_category": {
+    "Good": 22.5,
+    "Satisfactory": 19.9,
+    "Moderate": 31.8,
+    "Poor": 55.5,
+    "Very Poor": 50.6,
+    "Severe": 56.5
+  }
+}
