@@ -1,4 +1,15 @@
-﻿venv/
+# Python
+venv/
+.venv/
 __pycache__/
+*.pyc
+
+# Jupyter
 .ipynb_checkpoints/
-*.pkl
+
+# Editors / OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Note: models/*.pkl are committed on purpose so the app works after cloning.
